@@ -184,7 +184,7 @@ function showNotification(message, type = "info") {
       break;
     default:
       notification.style.background =
-        "linear-gradient(135deg, #667eea, #764ba2)";
+        "linear-gradient(135deg, #3b82f6, #06b6d4)";
   }
 
   document.body.appendChild(notification);
@@ -216,10 +216,8 @@ const pauseOnHover = (selector) => {
   });
 };
 
-// Apply pause on hover to all sliders
+// Apply pause on hover to skills slider only (keep clients and reviews moving)
 pauseOnHover(".skills-track");
-pauseOnHover(".clients-track");
-pauseOnHover(".reviews-track");
 
 // Add click handlers for project links
 document.querySelectorAll(".project-links a").forEach((link) => {
@@ -295,7 +293,7 @@ const createScrollIndicator = () => {
         left: 0;
         width: 0%;
         height: 4px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
         z-index: 9999;
         transition: width 0.3s ease;
     `;
@@ -375,7 +373,7 @@ highlightActiveNav();
 const style = document.createElement("style");
 style.textContent = `
     .nav-link.active {
-        color: #667eea;
+        color: #3b82f6;
     }
     
     .nav-link.active::after {

@@ -12,6 +12,16 @@ body {
   overflow-x: hidden;
 }
 
+/* Hide scrollbar for all browsers */
+html {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* WebKit browsers (Chrome, Safari, Edge) */
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -40,7 +50,7 @@ body {
 }
 
 .nav-logo h2 {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -62,7 +72,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #667eea;
+  color: #3b82f6;
 }
 
 .nav-link::after {
@@ -72,7 +82,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
   transition: width 0.3s ease;
 }
 
@@ -99,7 +109,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
   color: white;
   padding-top: 80px;
   position: relative;
@@ -174,7 +184,7 @@ body {
 
 .btn-secondary:hover {
   background: white;
-  color: #667eea;
+  color: #3b82f6;
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
 }
@@ -186,12 +196,12 @@ body {
 
 .btn-outline {
   background: transparent;
-  color: #667eea;
-  border: 2px solid #667eea;
+  color: #3b82f6;
+  border: 2px solid #3b82f6;
 }
 
 .btn-outline:hover {
-  background: #667eea;
+  background: #3b82f6;
   color: white;
 }
 
@@ -225,7 +235,7 @@ section {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -280,15 +290,23 @@ section {
 
 .stat-item h3 {
   font-size: 2.5rem;
-  color: #667eea;
+  color: #3b82f6;
   margin-bottom: 0.5rem;
 }
 
 /* Skills Section */
 .skills {
-  background: #667eea;
+  background: #3b82f6;
   color: white;
   overflow: hidden;
+}
+
+.skills .section-title {
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+  color: white;
 }
 
 .skills-slider {
@@ -364,7 +382,7 @@ section {
 
 .project-image {
   height: 200px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -395,7 +413,7 @@ section {
 }
 
 .project-tech span {
-  background: #667eea;
+  background: #3b82f6;
   color: white;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
@@ -422,7 +440,7 @@ section {
 .clients-track {
   display: flex;
   animation: slideLeft 25s linear infinite;
-  width: calc(300px * 12);
+  width: calc(300px * 16);
 }
 
 .client-item {
@@ -443,7 +461,7 @@ section {
 .client-logo {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #667eea;
+  color: #3b82f6;
 }
 
 .client-item h4 {
@@ -459,9 +477,17 @@ section {
 
 /* Reviews Section */
 .reviews {
-  background: #667eea;
+  background: #3b82f6;
   color: white;
   overflow: hidden;
+}
+
+.reviews .section-title {
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+  color: white;
 }
 
 .reviews-slider {
@@ -473,7 +499,7 @@ section {
 .reviews-track {
   display: flex;
   animation: slideLeft 30s linear infinite;
-  width: calc(400px * 6);
+  width: calc(400px * 10);
 }
 
 .review-item {
@@ -558,7 +584,7 @@ section {
 .contact-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -600,7 +626,7 @@ section {
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #3b82f6;
 }
 
 .form-group textarea {
@@ -609,7 +635,7 @@ section {
 
 /* Footer */
 .footer {
-  background: #333;
+  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
   color: white;
   padding: 2rem 0;
 }
@@ -632,7 +658,7 @@ section {
 }
 
 .footer-social a:hover {
-  color: #667eea;
+  color: #3b82f6;
 }
 
 /* Responsive Design */
