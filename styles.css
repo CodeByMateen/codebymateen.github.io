@@ -306,7 +306,7 @@ section {
   -webkit-background-clip: unset;
   -webkit-text-fill-color: unset;
   background-clip: unset;
-  color: white;
+  color: #f8f9fa;
 }
 
 .skills-slider {
@@ -487,7 +487,7 @@ section {
   -webkit-background-clip: unset;
   -webkit-text-fill-color: unset;
   background-clip: unset;
-  color: white;
+  color: #f8f9fa;
 }
 
 .reviews-slider {
