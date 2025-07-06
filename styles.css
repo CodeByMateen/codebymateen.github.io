@@ -294,14 +294,69 @@ section {
   margin-bottom: 0.5rem;
 }
 
-/* Skills Section */
-.skills {
-  background: #3b82f6;
-  color: white;
-  overflow: hidden;
+/* Education Section */
+.education {
+  background: #f8f9fa;
 }
 
-.skills .section-title {
+.education-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.education-item {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.education-icon {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+}
+
+.education-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.education-details h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #3b82f6;
+}
+
+.education-location {
+  color: #666;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.education-description {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Experience Section */
+.experience {
+  background: #3b82f6;
+  color: white;
+}
+
+.experience .section-title {
   background: none;
   -webkit-background-clip: unset;
   -webkit-text-fill-color: unset;
@@ -309,22 +364,54 @@ section {
   color: #f8f9fa;
 }
 
-.skills-slider {
-  overflow: hidden;
+.experience-timeline {
   position: relative;
-  margin-top: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.skills-track {
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-50%);
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: 3rem;
   display: flex;
-  animation: slideLeft 20s linear infinite;
-  width: calc(400px * 8);
+  align-items: flex-start;
+  gap: 2rem;
 }
 
-.skill-item {
-  min-width: 300px;
-  margin: 0 50px;
+.experience-item:nth-child(odd) {
+  flex-direction: row;
+}
+
+.experience-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.experience-date {
+  flex-shrink: 0;
+  width: 150px;
   text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.experience-content {
+  flex: 1;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 15px;
@@ -332,21 +419,106 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.skill-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+.experience-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
   color: #ffd700;
 }
 
-.skill-item h3 {
-  font-size: 1.5rem;
+.experience-content h4 {
+  font-size: 1.2rem;
   margin-bottom: 1rem;
+  opacity: 0.9;
 }
 
-.skill-item p {
-  opacity: 0.8;
+.experience-achievements {
+  list-style: none;
+  margin-bottom: 1.5rem;
 }
 
+.experience-achievements li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.experience-achievements li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: #ffd700;
+  font-size: 0.8rem;
+}
+
+.experience-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.experience-tech span {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Skills Section */
+.skills {
+  background: #f8f9fa;
+}
+
+.skills-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.skills-category {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.skills-category:hover {
+  transform: translateY(-5px);
+}
+
+.skills-category h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  border-bottom: 2px solid #3b82f6;
+  padding-bottom: 0.5rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.skill-tag:hover {
+  transform: scale(1.05);
+}
+
+/* Sliding Animation for Clients and Reviews */
 @keyframes slideLeft {
   0% {
     transform: translateX(0);
@@ -718,8 +890,27 @@ section {
     text-align: center;
   }
 
-  .skills-track {
-    animation-duration: 15s;
+  .education-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .experience-timeline::before {
+    left: 20px;
+  }
+
+  .experience-item {
+    flex-direction: column !important;
+    padding-left: 40px;
+  }
+
+  .experience-date {
+    width: auto;
+    margin-bottom: 1rem;
+  }
+
+  .skills-categories {
+    grid-template-columns: 1fr;
   }
 
   .clients-track {
@@ -749,6 +940,19 @@ section {
   .contact-item {
     flex-direction: column;
     text-align: center;
+  }
+
+  .experience-item:nth-child(odd),
+  .experience-item:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .experience-timeline::before {
+    left: 15px;
+  }
+
+  .experience-item {
+    padding-left: 35px;
   }
 }
 
