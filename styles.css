@@ -471,51 +471,71 @@ section {
   background: #f8f9fa;
 }
 
-.skills-categories {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+.skills-table-container {
   margin-top: 3rem;
-}
-
-.skills-category {
   background: white;
-  padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  overflow: hidden;
 }
 
-.skills-category:hover {
-  transform: translateY(-5px);
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.skills-category h3 {
-  font-size: 1.3rem;
-  margin-bottom: 1.5rem;
-  color: #333;
-  border-bottom: 2px solid #3b82f6;
-  padding-bottom: 0.5rem;
-}
-
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.skill-tag {
+.skills-table th {
   background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
   color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: transform 0.3s ease;
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 2px solid #e9ecef;
+  width: 25%;
 }
 
-.skill-tag:hover {
-  transform: scale(1.05);
+.skills-table td {
+  padding: 2rem;
+  border-bottom: 1px solid #e9ecef;
+  vertical-align: middle;
+}
+
+.skills-table tr:last-child td {
+  border-bottom: none;
+}
+
+.skills-table tr:hover {
+  background: #f8f9fa;
+}
+
+.skills-table td div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-table td div a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+.skills-table td div a:hover {
+  transform: scale(1.1);
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.skills-table td div a img {
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.skills-table td div a:hover img {
+  opacity: 0.8;
 }
 
 /* Sliding Animation for Clients and Reviews */
@@ -623,11 +643,6 @@ section {
   border-radius: 15px;
   padding: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.client-item:hover {
-  transform: translateY(-5px);
 }
 
 .client-logo {
@@ -909,8 +924,26 @@ section {
     margin-bottom: 1rem;
   }
 
-  .skills-categories {
-    grid-template-columns: 1fr;
+  .skills-table th,
+  .skills-table td {
+    padding: 1rem;
+  }
+
+  .skills-table th {
+    font-size: 1rem;
+  }
+
+  .skills-table td div {
+    gap: 0.5rem;
+  }
+
+  .skills-table td div a {
+    padding: 0.25rem;
+  }
+
+  .skills-table td div a img {
+    width: 30px;
+    height: 30px;
   }
 
   .clients-track {

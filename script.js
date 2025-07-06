@@ -236,10 +236,10 @@ document.querySelectorAll(".project-links a").forEach((link) => {
   });
 });
 
-// Add hover effects to cards
+// Add hover effects to cards (excluding client-item and review-item)
 const addHoverEffects = () => {
   const cards = document.querySelectorAll(
-    ".project-card, .stat-item, .contact-item, .skill-item, .client-item, .review-item"
+    ".project-card, .stat-item, .contact-item, .skill-item"
   );
 
   cards.forEach((card) => {
