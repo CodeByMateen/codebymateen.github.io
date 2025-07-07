@@ -352,7 +352,7 @@ section {
 
 /* Experience Section */
 .experience {
-  background: #3b82f6;
+  background: linear-gradient(90deg, #3b82f6 0%, #06b6d4 100%);
   color: white;
 }
 
@@ -664,7 +664,7 @@ section {
 
 /* Reviews Section */
 .reviews {
-  background: #3b82f6;
+  background: linear-gradient(90deg, #3b82f6 0%, #06b6d4 100%);
   color: white;
   overflow: hidden;
 }
